@@ -1,0 +1,360 @@
+/* ==================== GLOBAL STYLING ==================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------- NAVBAR (same everywhere) ---------------- */
+.navbar {
+    list-style-type: none;
+    background-color: #333;   /* black navbar */
+    overflow: hidden;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 15px  20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size:18px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: yellow;
+}
+
+/* ---------------- HEADINGS & TEXT ---------------- */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.4;
+    font-weight: 900;  /* extra bold */
+    color: #111;
+}
+
+p {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    text-align: justify;
+    font-size: 17px;
+    color: #111;
+    font-weight: 500;  /* stronger text */
+}
+
+/* ---------------- HOME PAGE ---------------- */
+body.home {
+    background: url("Tablemountain9.jpg") no-repeat center center/cover;
+    color: black;
+    text-align: center;
+}
+
+body.home h1, 
+body.home h2 {
+    color: white;
+    text-shadow: none;
+    font-weight: 900;
+}
+
+body.home p {
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+}
+
+/* ---------------- ABOUT PAGE ---------------- */
+body.about {
+    background-color: #f0f8ff;  /* different but complementary */
+}
+
+img.float-right {
+    float: right;
+    margin: 8px 0 12px 16px;
+    width: 320px;
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.15);
+}
+
+blockquote {
+    max-width: 900px;
+    margin: 20px auto;
+    font-style: italic;
+    background: #e6f2ff;
+    padding: 10px 15px;
+    border-left: 5px solid #006699;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.funfact-container {
+    text-align: center;   /* centers both button and fact */
+    margin: 20px 0;
+}
+
+#funfact {
+    display: none;
+    margin: 10px auto 0;
+    max-width: 600px;
+    background: #e6ffe6;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.4s ease;   /* smooth reveal */
+}
+
+button {
+    background: #006699;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover {
+    background: #004466;
+}
+
+/* ---------------- GALLERY PAGE ---------------- */
+body.gallery {
+    background-color: #fff8f0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery figure {
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    img.float-right {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Lightbox overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Lightbox image */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption */
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Lightbox arrows */
+.next-btn, .prev-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  padding: 16px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.next-btn:hover, .prev-btn:hover {
+  color: #f1c40f;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+
+
+
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background: #006699;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover {
+    background: #004466;
+}
+
+
+
+.filter-buttons button.active {
+    background-color: #f1c40f; /* bright highlight */
+    color: #111;
+}
+
+
+
+/* ===== Fix alignment for dynamically injected About content ===== */
+#destination-info {
+  max-width: 900px;        /* same readable width as your global p */
+  margin: 20px auto;       /* center the whole column on the page */
+  padding: 12px 16px;      /* breathing space inside the column */
+  box-sizing: border-box;
+}
+
+/* Make headings inside the injected section consistent and centered */
+#destination-info h2,
+#destination-info h3 {
+  text-align: center;      /* match your main headings style */
+  margin: 18px 0 12px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* spacing for each content block */
+.about-section__block {
+  margin-bottom: 22px;
+}
+
+/* Paragraphs: justified and readable */
+#destination-info p {
+  text-align: justify;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  color: #111;
+}
+
+/* Center the list block but keep list items left aligned for readability */
+#destination-info ul {
+  max-width: 820px;
+  margin: 0 auto 16px;
+  padding-left: 1.2rem;    /* bullet indentation */
+}
+
+#destination-info ul li {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 768px) {
+  #destination-info {
+    padding: 10px;
+    max-width: 95%;
+  }
+  #destination-info h2,
+  #destination-info h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+.extra-info {
+    text-align: center;
+    margin: 25px auto;
+    max-width: 800px;
+}
+
+.extra-info p {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+

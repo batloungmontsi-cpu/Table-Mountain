@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Discover Table Mountain</title>  
+    <link rel="stylesheet" href="style.2.css">  
+</head>  
+
+<body class="about">  
+
+    <!-- Navigation -->  
+    <ul class="navbar">  
+        <li><a href="index.html">Home</a></li>  
+        <li><a class="active" href="about.html">About</a></li>  
+        <li><a href="gallery.html">Gallery</a></li>  
+    </ul>  
+
+    <h1>Discover Table Mountain</h1>  
+
+    <!-- ✅ Dynamic destination info will load here -->
+    <section id="destination-info"></section>  
+
+    <!-- Fun Fact Toggle -->  
+    <div class="funfact-container">  
+        <button id="funFactBtn">Fun Fact</button> 
+        <div id="funfact" style="display:none;">  
+            Table Mountain is home to more plant species than the entire United Kingdom—over 2,200 unique species!  
+        </div>  
+    </div> 
+    
+    <section class="extra-info">
+        <button id="toggleInfoBtn">Show More</button>
+        <div id="extraInfo" style="display: none; margin-top: 15px;">
+            <p>
+                Table Mountain is home to over 2,200 species of plants, many of which are found
+                nowhere else on Earth. It is also part of the Cape Floral Region, a UNESCO World
+                Heritage Site, making it not just a scenic wonder but also a biodiversity hotspot.
+            </p>
+            <p>
+                Wildlife includes rock hyraxes (dassies), porcupines, mongooses, and over 350
+                species of birds. Adventurers can enjoy abseiling, paragliding, or even cave
+                exploring within the mountain.
+            </p>
+        </div>
+    </section>
+
+    <!-- External JS that connects all pages -->  
+    <script src="javascript.js"></script>  
+
+</body>  
+</html>

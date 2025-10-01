@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Africa in Pictures</title>
+    <link rel="stylesheet" href="style.2.css">
+</head>
+<body class="gallery-page">
+
+    <!-- Navigation -->
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+    </ul>
+
+    <!-- Page Title -->
+    <h1>South Africa in Pictures</h1>
+    <p>Explore the beauty of South Africa through these stunning images.</p>
+    
+    <!-- Weather Info -->
+    <div id="weather-info" style="text-align:center; margin:15px auto 25px; padding:12px 20px; max-width:400px; background-color:#e6f7ff; border-radius:8px; font-weight:bold; color:#004466; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-size:16px;">
+        Loading current weather...
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button data-filter="all">Show All</button>
+        <button data-filter="beach">Show Beaches</button>
+        <button data-filter="mountain">Show Mountains</button>
+        <button data-filter="city">Show Cities</button>
+        <button data-filter="safari">Show Safari</button>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <figure data-category="mountain">
+            <img src="TablePicture.jpg" alt="Table Mountain" class="gallery-img">
+            <figcaption>Table Mountain</figcaption>
+        </figure>
+
+        <figure data-category="safari">
+            <img src="TablePicture2.jpg" alt="Safari Elephants" class="gallery-img">
+            <figcaption>Safari Adventure</figcaption>
+        </figure>
+
+        <figure data-category="city">
+            <img src="TablePicture6.jpg" alt="Cape Town City" class="gallery-img">
+            <figcaption>Cape Town City</figcaption>
+        </figure>
+
+        <figure data-category="mountain">
+            <img src="TablePicture4.jpg" alt="Drakensberg Mountains" class="gallery-img">
+            <figcaption>Drakensberg Mountains</figcaption>
+        </figure>
+
+        <figure data-category="beach">
+            <img src="TablePicture5.jpg" alt="Beach Sunset" class="gallery-img">
+            <figcaption>Beach Sunset</figcaption>
+        </figure>
+    </div>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
